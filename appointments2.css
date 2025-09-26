@@ -1,0 +1,209 @@
+.nav-buttons {
+    margin-top: 1rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn-secondary {
+    background: #6c757d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.btn-secondary:hover {
+    background: #5a6268;
+    transform: translateY(-1px);
+}
+
+.appointments-grid-minimal {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 2rem 0;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.appointment-card-minimal {
+    background: white;
+    border: 1px solid #333;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    transition: all 0.2s ease;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.appointment-card-minimal:hover {
+    border-color: #000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+}
+
+.card-header-minimal {
+    background: white;
+    border-bottom: 1px solid #333;
+    padding: 1rem;
+}
+
+.appointment-datetime {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #000;
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+
+.card-content-minimal {
+    padding: 1.5rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    opacity: 0;
+}
+
+.appointment-card-minimal.expanded .card-content-minimal {
+    max-height: 200px;
+    opacity: 1;
+}
+
+.appointment-card-minimal.collapsed {
+    cursor: pointer;
+}
+
+.appointment-card-minimal.collapsed .card-header-minimal {
+    padding: 1rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.appointment-card-minimal.collapsed .appointment-datetime {
+    text-align: left;
+    flex: 1;
+}
+
+.doctor-name-preview {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #333;
+    text-align: right;
+}
+
+.expand-indicator {
+    font-size: 0.8rem;
+    color: #666;
+    margin-left: 1rem;
+    transition: transform 0.2s ease;
+}
+
+.appointment-card-minimal.expanded .expand-indicator {
+    transform: rotate(180deg);
+}
+
+.card-content-minimal h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.card-content-minimal .appointment-type {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 0.75rem;
+    font-weight: 500;
+}
+
+.card-content-minimal .appointment-location {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 0.75rem;
+    line-height: 1.4;
+}
+
+.card-content-minimal .appointment-duration {
+    font-size: 0.85rem;
+    color: #999;
+    font-style: italic;
+    border-top: 1px solid #eee;
+    padding-top: 0.75rem;
+    margin-top: 0.75rem;
+}
+
+@media (max-width: 768px) {
+    .appointments-grid-minimal {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 1rem;
+    }
+    
+    .appointment-card-minimal {
+        margin: 0 0.5rem;
+    }
+    
+    .card-header-minimal {
+        padding: 0.75rem;
+    }
+    
+    .appointment-datetime {
+        font-size: 1rem;
+    }
+    
+    .card-content-minimal {
+        padding: 1.25rem;
+    }
+    
+    .card-content-minimal h3 {
+        font-size: 1.2rem;
+    }
+    
+    .nav-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .appointments-grid-minimal {
+        padding: 0.5rem;
+    }
+    
+    .appointment-card-minimal {
+        margin: 0;
+    }
+    
+    .card-header-minimal {
+        padding: 0.5rem;
+    }
+    
+    .card-content-minimal {
+        padding: 1rem;
+    }
+    
+    header {
+        padding: 1.5rem 1rem;
+    }
+    
+    header h1 {
+        font-size: 1.8rem;
+    }
+    
+    .nav-buttons {
+        gap: 0.5rem;
+    }
+    
+    .btn-secondary {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+}
